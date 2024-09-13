@@ -8,15 +8,25 @@ const temperatureElement = document.getElementById('temperature');
 const descriptionElement = document.getElementById('description');
 const weatherImageElement = document.getElementById('weatherImage');
 
+locationInput.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      searchButton.click();
+    }
+  });
+
+
 searchButton.addEventListener('click', () => {
     const location = locationInput.value;
     if (location) {
         fetchWeather(location);
     }
-    else{
-        locationInput.placeholder = 'Enter a location';
-    }
 })
+
+
 
 function fetchWeather(location) {
     const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=imperial`;
@@ -34,6 +44,10 @@ function fetchWeather(location) {
             locationElement.textContent = 'Error fetching weather data:', error;
         });
 }
+
+
+fetchReq = fetch('https://reqres.in/api/users');
+console.log(fetchReq);
 
 // function buttonClicked(){
 //     document.getElementById("weatherInfo").style = "display: block";
