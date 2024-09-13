@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-    <title>Document</title>
+    <title>WeatherData</title>
 </head>
 <body>
 
@@ -14,10 +14,15 @@
     </header>
 
     <div id="weatherInfo" style="display: none;">
-        <h2 id="location"></h2>
-        <img id="weatherImage">
-        <h4 id="temperature"></h4>
-        <p id="description"></p>        
+            <h2 id="location" style="margin-right: 10px;"></h2>
+        <div style="display: flex; align-items: center;">
+                <img id="weatherImage" alt="Weather icon">
+                <h2 id="temperature"></h2>
+        </div>
+
+        <section>
+            <p id="description"></p>        
+        </section>
     </div>
 
 
