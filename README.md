@@ -13,6 +13,6 @@ A simple, lightweight website that displays current weather information using th
 ## 🛠️ Technologies
 
 - 🌐 HTML5
-- 🎨 CSS3
+- 🎨 CSS3 - Using *simple.css*
 - 💻 JavaScript (ES6+)
 - 🌡️ OpenWeatherMap API
